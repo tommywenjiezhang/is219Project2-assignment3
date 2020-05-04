@@ -16,7 +16,7 @@ A simple  express CRUD app using Jquery
 |/:id [delete]| delete a city with id |
 
 # INDEX Route
-![Index Route](screenshots/index.pug)
+![Index Route](screenshots/index.png)
 
 # Create Route
 ![create route](screenshots/create.png)
