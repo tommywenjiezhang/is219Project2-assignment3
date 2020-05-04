@@ -23,7 +23,7 @@ A simple  express CRUD app using Jquery
 
 # Edit Route
 
-![create route](screenshots/edit.pug)
+![create route](screenshots/edit.png)
 
 
 ## Project Setup Instructions
