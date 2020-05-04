@@ -25,6 +25,9 @@ A simple  express CRUD app using Jquery
 
 ![create route](screenshots/edit.png)
 
+# show Route
+
+![show route](screenshots/show.png)
 
 ## Project Setup Instructions
 
