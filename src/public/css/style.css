@@ -1,0 +1,36 @@
+.container{
+    margin-top: 10%;
+}
+
+.city-record{
+    padding-bottom: 0!important;
+}
+.edit_form{
+    min-width: 50%;
+    min-height:100%;
+    text-align:center;
+}
+.delete_form{
+    min-width: 50%;
+    min-height:100%;
+    text-align:center;
+}
+
+
+.page_submit{
+    display: inline-block;
+    width:100%;
+}
+
+.create_new{
+   min-width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5px;
+}
+.post-image{
+    max-width: 50%;
+}
+
+#map{
+    height:100%;
+}

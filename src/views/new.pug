@@ -1,0 +1,18 @@
+include ./partials/header.pug
+include ./partials/top_menu
+mixin form-group(val)
+    div(class="form-group")
+        label(for=val)=val
+        input(type="text",class="form-control" name=val)
+
+div(class = "container")
+    a(href='/' ) <- Go Back
+    h1 Create a new city
+    form(action="/", method="post")
+        - var values = ["id","fldName","fldLat","fldLong","fldCountry","fldAbbreviation","fldCapitalStatus","fldPopulation"];
+        each val in values
+            +form-group(val)
+        input(type="submit", name="submit", class="btn btn-success page_submit")
+include ./partials/footer
+
+

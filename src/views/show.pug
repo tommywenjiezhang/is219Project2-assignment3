@@ -1,0 +1,23 @@
+include ./partials/header.pug
+include ./partials/top_menu
+div(class = "container")
+    div(class="row")
+        div(class="col-md-8 offset-md-2 col-sm-12")
+            div(class="card")
+                div(class="row")
+                    div(class="col-md-6")
+                        img(class="post_image img-fluid")
+                    div(class="col-md-6")
+                        div(id="map" lat=city.fldLat lng=city.fldLong)
+                h1(class="card-title" key=city.id name=city.fldName) #{city.fldName} in #{city.fldCountry}
+                div(class="card-text")
+                    table(class="table")
+                        thead
+                            th City Name
+                            th City Population
+                        tr
+                            td #{city.fldName}
+                            td #{city.fldPopulation} People
+
+script(src="/static/js/show.js")
+include ./partials/footer

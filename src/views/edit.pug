@@ -1,0 +1,17 @@
+
+include ./partials/header.pug
+include ./partials/top_menu
+mixin form-group(val,city)
+    div(class="form-group")
+        label(for=val)=val
+        input(type="text",value=city[val], class="form-control" name=val)
+
+div(class = "container")
+    a(href='/' ) <- Go Back
+    h1= "Edit" + " " + city['fldName']
+    form(action="/edit/"+city.id+"?_method=PUT", method="post")
+        - var values = ["id","fldName","fldLat","fldLong","fldCountry","fldAbbreviation","fldCapitalStatus","fldPopulation"];
+        each val in values
+            +form-group(val,city)
+        input(type="submit", name="submit", class="btn btn-success page_submit")
+include ./partials/footer

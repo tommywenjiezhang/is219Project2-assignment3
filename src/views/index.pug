@@ -1,0 +1,36 @@
+include ./partials/header.pug
+include ./partials/top_menu
+div(class = "container")
+    div(class="row")
+        div(class="col-sm-12 col-md-12")
+            a(class = "btn btn-success create_new" href="/new") Create new Record
+    table(id="citiesTable",
+    class="table display table-striped", width="100%")
+        thead
+            tr
+                th( scope="col") id
+                th( scope="col") fldName
+                th( scope="col") fldLat
+                th( scope="col") fldLong
+                th( scope="col") fldCountry
+                th( scope="col") fldAbbreviation
+                th(scope="col") fldPopulation
+                th(scope="col" class="form-control-header") Editor
+        each city in cities
+            tr(class="city_record" onclick="city_record_click(event)" key=city.id)
+                td #{city.id}
+                td
+                    a(href="/"+city.id) #{city.fldName}
+                td #{city.fldLat}
+                td #{city.fldLong}
+                td #{city.fldCountry}
+                td #{city.fldAbbreviation}
+                td #{city.fldPopulation}
+                td(class="edit_delete_form-control")
+                    div(class="d-flex align-items-stretch")
+                        div(class="edit_form")
+                            a(href="/edit/"+city.id class="record_edit") Edit
+                        div(class="delete_form")
+                            form(action= "/"+city.id+"?_method=delete", method="post",id="delete_form_submit"+city.id, name=city.id)
+                                a(href="#", class="submit_delete") Delete
+include ./partials/footer
