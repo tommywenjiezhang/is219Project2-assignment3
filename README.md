@@ -1,4 +1,4 @@
-# API Introduction and Setup an API Server with MySQL and Express
+# A simple  express CRUD app using Jquery
 
 ## Overview
 
@@ -15,17 +15,17 @@ A simple  express CRUD app using Jquery
 |  /edit/:id [put]| put a city with id|
 |/:id [delete]| delete a city with id |
 
-# INDEX Route
+## INDEX Route
 ![Index Route](screenshots/index.png)
 
-# Create Route
+## Create Route
 ![create route](screenshots/create.png)
 
-# Edit Route
+## Edit Route
 
 ![create route](screenshots/edit.png)
 
-# show Route
+## show Route
 
 ![show route](screenshots/show.png)
 
@@ -36,4 +36,4 @@ A simple  express CRUD app using Jquery
 3. Run npm install
 4. Setup docker in WebStorm
 5. Right click the docker-compose.yml file and run it from the project explorer
-6. Setup Gulp in WebStorm
+6. get google and usplash api key
