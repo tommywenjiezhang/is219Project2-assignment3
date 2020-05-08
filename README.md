@@ -1,10 +1,3 @@
-# A simple  express CRUD app using Jquery
-
-## Overview
-
-A simple  express CRUD app using Jquery
-
-
 
 # Simple NodeJs CRUD Project with Authenication
 ## INDEX Route
