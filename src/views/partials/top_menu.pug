@@ -1,9 +1,19 @@
 
 nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
-    a.navbar-brand(href='/') Home
+    a.navbar-brand(href='/city') Home
     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
     #navbarsExampleDefault.collapse.navbar-collapse
         ul.navbar-nav.mr-auto.justify-content-end
             li.nav-item
-                a.nav-link(href='/') Home
+                a.nav-link(href='/city') Home
+            li.nav-item
+                a.nav-link(href="/register") Sign up
+            if !currentUser
+                li.nav-item
+                    a.nav-link(href="/signin") Signin
+            else
+                li.nav-item
+                    a.nav-link(href="/logout") Logout
+
+

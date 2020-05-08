@@ -1,0 +1,18 @@
+include ../partials/header.pug
+div(class="row")
+    div(class="col-md-6 signInBanner")
+        img(id="vertical_banner" src="https://images.unsplash.com/photo-1565373987291-4d7424dd9e59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=863&q=80")
+    div(class="col-md-6 col-sm-12 signIn_form")
+        div(class="d-flex")
+            div(class="col-md-12")
+                h2 Sign In for my Website
+                form(action="/signin",METHOD="POST")
+                    .form-group
+                        label(for='emailinput') Email address
+                        input#emailinput.form-control(type='email' name="email" aria-describedby='emailHelp' placeholder='Enter email')
+                        small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+                    .form-group
+                        label(for='exampleInputPassword1') Password
+                        input#exampleInputPassword1.form-control(type='password' name="password" placeholder='Password')
+                    input.btn.btn-primary(type='submit', id="signInSubmitButton" name="submit", value ="submit")
+                    a(href="/city") <- Go Back home

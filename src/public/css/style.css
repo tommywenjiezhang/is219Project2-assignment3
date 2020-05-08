@@ -1,7 +1,11 @@
 .container{
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-left:2%;
 }
-
+#citiesTable{
+    padding: 5px;
+    border:1px black solid;
+}
 .city-record{
     padding-bottom: 0!important;
 }
@@ -23,8 +27,8 @@
 }
 
 .create_new{
-   min-width: 100%;
-    margin-top: 5%;
+    min-width: 100%  !important;
+    display: inline-block;
     margin-bottom: 5px;
 }
 .post-image{
@@ -33,4 +37,34 @@
 
 #map{
     height:100%;
+}
+#vertical_banner{
+    min-height:100%;
+    max-width:100%;
+}
+.signIn_form{
+    margin-top:15%;
+}
+#signInSubmitButton{
+    margin-top:1%;
+    min-width: 100%;
+    display: inline-block;
+}
+@media only screen and (max-width: 1200px) {
+    .signInBanner {
+        display: none;
+    }
+    .container{
+        margin-top:20%;
+    }
+}
+#signUpSubmitButton{
+    margin-top:1%;
+    min-width: 100%;
+    display: inline-block;
+}
+.show_container{
+    margin-top: 5%;
+    height: 40%;
+
 }

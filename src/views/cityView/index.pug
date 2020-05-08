@@ -1,0 +1,43 @@
+include ../partials/header
+include ../partials/top_menu
+div(class="container")
+    div(class="row")
+        div(class="col-md-4")
+            if success && success.length > 0
+                div(class="alert alert-success")=success[0] + (currentUser ? ':  ' + currentUser.name : 'Welcome')
+            else if errors && errors.length > 0
+                div(class= "alert alert-danger")=errors[0]
+            a(class = "btn btn-success create_new" href="/city/new") Create new Record
+            table(id="citiesTable",class="table display table-striped", width="100%")
+                thead
+                    tr
+                        th( scope="col") id
+                        th( scope="col") City Name
+                        th( scope="col") lat
+                        th( scope="col") long
+                        th( scope="col") Country
+                        th( scope="col") Abbreviation
+                        th(scope="col")  Population
+                        th(scope="col" class="form-control-header") Editor
+                each city in cities
+                    tr(class="city_record" onclick="city_record_click(event)" key=city.id)
+                        td #{city.id}
+                        td
+                            a(href="/city/"+city.id) #{city.cityName}
+                        td #{city.lat}
+                        td #{city.lng}
+                        td #{city.country}
+                        td #{city.abbreviation}
+                        td #{city.population}
+                        td(class="edit_delete_form-control")
+                            div(class="d-flex align-items-stretch")
+                                div(class="edit_form")
+                                    a(href="/city/edit/"+city.id class="record_edit") Edit
+                                div(class="delete_form")
+                                    form(action= "/city/"+city.id+"?_method=delete", method="post",id="delete_form_submit"+city.id, name=city.id)
+                                        a(href="#", class="submit_delete") Delete
+        div(class="col-md-6")
+            div(id="chart" style="position:fixed; top:80; left:922;right:1654;bottom:588; width:800; height:425; ")
+            div(id="barchart_values" style="position:fixed; top:523; left:922;right:1654;bottom:795; width:600; height:400; ")
+script(src="/static/js/chart.js")
+include ../partials/footer

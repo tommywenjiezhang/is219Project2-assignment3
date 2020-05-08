@@ -3,3 +3,4 @@ package-lock.json
 .vscode
 .idea
 .env
+./src/public/js/API_KEY.js

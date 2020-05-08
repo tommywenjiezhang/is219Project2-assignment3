@@ -1,0 +1,22 @@
+
+include ../partials/header.pug
+div(class="col-md-10 offset-md-1 col-sm-12 mt-5")
+    h2 Sign Up for my Website
+    form(action="/signup",METHOD="POST")
+        .form-group
+            label(for='emailinput') Email address
+            input#emailinput.form-control(type='email' name="email" aria-describedby='emailHelp' placeholder='Enter email')
+            small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+        .form-group
+            label(for='exampleUsername') Username
+            input#exampleUsername.form-control(type='text' name="username" placeholder='username')
+        .form-group
+            label(for='exampleInputPassword1') Password
+            input#exampleInputPassword1.form-control(type='password' name="password" placeholder='Password')
+        .form-group
+            label(for='exampleName') Name
+            input#exampleName.form-control(type='text' name="name" placeholder='name')
+        .form-group
+            label(for='examplePhone') Phone
+            input#examplePhone.form-control(type='tel' name="phone" placeholder='phone number')
+        input.btn.btn-primary(type='submit', id="signUpSubmitButton" name="submit", value ="submit")

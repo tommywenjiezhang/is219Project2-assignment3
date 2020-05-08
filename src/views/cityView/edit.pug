@@ -1,0 +1,17 @@
+
+include ../partials/header
+include ../partials/top_menu
+mixin form-group(val,city)
+    div(class="form-group")
+        label(for=val)=val
+        input(type="text",value=city[val], class="form-control" name=val)
+
+div(class = "container")
+    a(href='/city' ) <- Go Back
+    h1= "Edit" + " " + city['cityName']
+    form(action="/city/edit/"+city.id+"?_method=PUT", method="post")
+        - var values = ["id","cityName","lat","lng","country","abbreviation","capital","population"];
+        each val in values
+            +form-group(val,city)
+        input(type="submit", name="submit", class="btn btn-success page_submit")
+include ../partials/footer

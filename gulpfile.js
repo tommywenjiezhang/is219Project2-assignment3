@@ -25,7 +25,7 @@ function nodeMonServe() {
         },
         ignore: ['./node_modules/**']
     });
-};
+}
 
 exports.serve = gulp.task(nodeMonServe);
-exports.default = gulp.task(nodeMonServe)
+exports.default = gulp.task(nodeMonServe);
