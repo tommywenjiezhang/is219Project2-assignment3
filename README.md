@@ -8,7 +8,7 @@ A simple  express CRUD app using Jquery
 
 # Simple NodeJs CRUD Project with Authenication
 ## INDEX Route
-![Index Route](screenshots/index.png)
+![Index Route](screenshots/Index.png)
 
 ## Create Route
 ![create route](screenshots/create.png)
@@ -22,7 +22,7 @@ A simple  express CRUD app using Jquery
 ![show route](screenshots/show.png)
 
 ## sign in Route
-![Signin route](screenshots/signin.png)
+![Signin route](screenshots/signIn.png)
 ### Thing to do before start this project
 1. Things to run in command
 ```
