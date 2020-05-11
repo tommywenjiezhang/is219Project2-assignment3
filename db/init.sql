@@ -39,6 +39,7 @@ CREATE TABLE `tblCitiesImport` (
 
 LOCK TABLES `tblCitiesImport` WRITE;
 
+
 INSERT INTO
   `tblCitiesImport`
 VALUES
