@@ -3,7 +3,7 @@ const passport = require('passport');
 const {signUp,signIn,logOut, getSignInPage, getSignUpPage} = require('../controller/indexController');
 // sign up
 router.post('/signup',passport.authenticate('local-signup', {
-    successRedirect: '/',
+    successRedirect: '/city',
     failureRedirect: '/register'
 }), signUp);
 // sign in
