@@ -14,7 +14,7 @@ const cookieParser = require("cookie-parser");
 const dotenv = require('dotenv');
 const open = require('open');
 
-open("http://localhost:8000/city");
+open("http://localhost:8000");
 
 
 

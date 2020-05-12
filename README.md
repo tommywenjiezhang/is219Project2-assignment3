@@ -1,5 +1,8 @@
 
 # Simple NodeJs CRUD Project with Authenication
+
+## Landing page
+![Landing Route](screenshots/Landing.gif)
 ## INDEX Route
 ![Index Route](screenshots/index.gif)
 

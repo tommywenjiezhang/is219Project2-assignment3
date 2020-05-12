@@ -2,7 +2,10 @@ const router = require('express').Router();
 const passport = require('passport');
 const {signUp,signIn,logOut, getSignInPage, getSignUpPage} = require('../controller/indexController');
 
-
+router.get('/', (req,res) =>
+{
+    res.render("landing")
+})
 // sign up
 router.post('/signup',passport.authenticate('local-signup', {
     successRedirect: '/city',
