@@ -37,7 +37,18 @@ CREATE TABLE `tblCitiesImport` (
 );
 
 
-LOCK TABLES `tblCitiesImport` WRITE;
+
+
+DROP TABLE IF EXISTS `Comment`;
+create table `Comment`( `comment_id` int(11) NOT NULL AUTO_INCREMENT,
+`comment_text` TINYTEXT,
+`UserID` int(11),
+`post_id` int(11),
+PRIMARY KEY (`comment_id`),
+ FOREIGN KEY (`UserID`) REFERENCES `User` (`UserID`),
+FOREIGN KEY (`post_id`) REFERENCES `tblCitiesImport` (`id`)
+);
+
 
 
 INSERT INTO

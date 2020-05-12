@@ -57,6 +57,7 @@ passport.use('local-signin',
             }
         }).then(function(user) {
             if (!user) {
+                req.flash("errors", "user does not exist")
                 return done(null, false, {
                     message: 'Email does not exist'
                 });

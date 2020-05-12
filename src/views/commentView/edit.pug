@@ -1,0 +1,11 @@
+include ../partials/header
+include ../partials/top_menu
+
+div(class="comment-section")
+    div(class="col-md-10 offset-md-1 col-sm-12")
+        a(href='/city/'+ comment.post_id) <- Go Back
+        h1 Edit comment for #{comment.User.name}
+        form(action="/city/" + comment.post_id + "/comments/"+ comment.comment_id + "?_method=PUT", method="post")
+            label(for="comment_body")
+            textarea(type="text" , id="comment_body", class="form-control" name="comment[comment_text]" rows="3")= comment.comment_text
+            input(type="submit",  name="submit", class="btn btn-success page_submit mt-2")

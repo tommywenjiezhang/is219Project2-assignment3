@@ -19,15 +19,22 @@
     min-height:100%;
     text-align:center;
 }
-
-
+.fa-edit{
+    color:#457b9d;
+}
+.fa-trash-alt{
+    color:#457b9d;
+}
+a {
+    z-index: 20;
+    position: relative;
+}
 .page_submit{
     display: inline-block;
     width:100%;
 }
 
 .create_new{
-    min-width: 100%  !important;
     display: inline-block;
     margin-bottom: 5px;
 }
@@ -57,6 +64,13 @@
     .container{
         margin-top:20%;
     }
+    .city_comment_sidebar{
+        margin-top: 5%;
+
+    }
+    .show_container{
+        margin-top: 10%;
+    }
 }
 #signUpSubmitButton{
     margin-top:1%;
@@ -66,5 +80,7 @@
 .show_container{
     margin-top: 5%;
     height: 40%;
-
+}
+.comment-section{
+    margin-top: 5%;
 }

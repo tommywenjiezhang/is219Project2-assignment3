@@ -7,7 +7,9 @@ div(class="container")
                 div(class="alert alert-success")=success[0] + (currentUser ? ':  ' + currentUser.name : 'Welcome')
             else if errors && errors.length > 0
                 div(class= "alert alert-danger")=errors[0]
-            a(class = "btn btn-success create_new" href="/city/new") Create new Record
+            a(class = "btn btn-success create_new" href="/city/new")
+                i(class="fas fa-plus")
+
             table(id="citiesTable",class="table display table-striped", width="100%")
                 thead
                     tr
@@ -32,10 +34,12 @@ div(class="container")
                         td(class="edit_delete_form-control")
                             div(class="d-flex align-items-stretch")
                                 div(class="edit_form")
-                                    a(href="/city/edit/"+city.id class="record_edit") Edit
+                                    a(href="/city/edit/"+city.id, city_id=city.id class="record_edit")
+                                        i(class="fas fa-edit")
                                 div(class="delete_form")
                                     form(action= "/city/"+city.id+"?_method=delete", method="post",id="delete_form_submit"+city.id, name=city.id)
-                                        a(href="#", class="submit_delete") Delete
+                                        a(href="#", name=city.id class="submit_delete")
+                                            i(class="fas fa-trash-alt")
         div(class="col-md-6")
             div(id="chart" style="position:fixed; top:80; left:922;right:1654;bottom:588; width:800; height:425; ")
             div(id="barchart_values" style="position:fixed; top:523; left:922;right:1654;bottom:795; width:600; height:400; ")

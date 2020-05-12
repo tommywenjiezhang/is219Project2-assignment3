@@ -17,7 +17,7 @@ router.get("/edit/:id", checkOwnship, cityController.edit);
 
 router.put("/edit/:id", checkOwnship,cityController.edit_put);
 
-router.delete("/:id", checkOwnship, cityController.delete);
+router.delete("/:id", cityController.delete);
 
 
 module.exports = router;

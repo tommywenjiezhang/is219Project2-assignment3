@@ -1,7 +1,12 @@
-const { Sequelize, DataTypes  } = require('sequelize');
+const { Sequelize, DataTypes , Model} = require('sequelize');
 const sequelize = require("../Data/index");
+const Comment = require('./Comment')
 
-const City = sequelize.define('house',{
+
+class City extends Model{
+
+}
+City.init({
     id:{
         type:DataTypes.BIGINT,
         primaryKey:true,
@@ -42,10 +47,15 @@ const City = sequelize.define('house',{
 
 
 },{
+    sequelize,
     freezeTableName: true,
     timestamps: false,
     tableName:'tblCitiesImport',
-    foreignKey: 'UserID'
+    foreignKey: 'UserID',
+
 });
 
+
 module.exports = City;
+
+

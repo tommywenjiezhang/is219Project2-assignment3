@@ -1,14 +1,14 @@
 const { Sequelize, Model } = require('sequelize');
 const sequelize = require("../Data/index");
 const bcrypt = require('bcrypt');
-
+const Comment = require('./Comment')
 
 class User extends Model{
-    static hashPassword = function(rawPassword){
+    static hashPassword(rawPassword){
         return bcrypt.hashSync(rawPassword,bcrypt.genSaltSync(8));
     };
 
-    static validPassword = function(password,storepassword) {
+    static validPassword(password,storepassword) {
         return bcrypt.compareSync(password, storepassword);
     };
 }
@@ -46,11 +46,5 @@ User.init({
     freezeTableName: true,
     timestamps: false// Model tableName will be the same as the model name
 });
-
-
-
-
-
-
 
 module.exports = User;

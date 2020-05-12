@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const cityRouter = require("./routes/city");
 const indexRouter = require('./routes/index');
+const commentRouter = require('./routes/comment')
 const path = require("path");
 const passport = require('passport');
 const session = require("express-session");
@@ -27,7 +28,7 @@ app.use(session({
 }));
 app.use(cookieParser());
 app.use(flash());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 require("./auth/index");
@@ -44,9 +45,9 @@ app.use(function (req, res, next) {
     res.locals.success = req.flash('success');
     next();
 });
-
 app.use('/',indexRouter);
 app.use("/city", cityRouter);
+app.use("/city/:id/comments", commentRouter);
 
 app.set('port', process.env.PORT || 8000);
 app.set('ip', process.env.NODEJS_IP || '127.0.0.1');
