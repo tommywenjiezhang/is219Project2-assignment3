@@ -1,14 +1,14 @@
 
 # Simple NodeJs CRUD Project with Authenication
 ## INDEX Route
-![Index Route](screenshots/Index.png)
+![Index Route](screenshots/index.gif)
 
 ## Create Route
 ![create route](screenshots/create.png)
 
 ## Edit Route
 
-![create route](screenshots/edit.png)
+![create route](screenshots/Edit.gif)
 
 ## show Route
 
@@ -16,6 +16,9 @@
 
 ## sign in Route
 ![Signin route](screenshots/signIn.png)
+
+## post comment
+![Post comment route](screenshots/post_comment.gif)
 ### Thing to do before start this project
 1. Things to run in command
 ```
